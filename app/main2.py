@@ -114,60 +114,6 @@ async def root():
 
     return HTMLResponse(content=html_content, status_code=200)
 
-
-@app.get("/404", summary="Page Not Found", tags=['Views'])
-async def root():
-    """
-        404 - Page Not Found. Non existent entrypoints will redirect here.
-    """
-    
-    html_content = """
-        <html>
-
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!-- Tailwind CSS -->
-        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-        <title>Password Generator</title>
-    </head>
-
-    <body>
-        <main class="min-h-full bg-cover bg-top sm:bg-top"
-            style="background-image: url('https://images.unsplash.com/photo-1545972154-9bb223aac798?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3050&q=80&exp=8&con=-15&sat=-75');">
-            <div class="max-w-7xl mx-auto px-4 py-16 text-center sm:px-6 sm:py-24 lg:px-8 lg:py-48">
-                <p class="text-sm font-semibold text-black text-opacity-50 uppercase tracking-wide">404 error</p>
-                <h1 class="mt-2 text-4xl font-extrabold text-white tracking-tight sm:text-5xl">Uh oh! I think you’re lost.
-                </h1>
-                <p class="mt-2 text-lg font-medium text-black text-opacity-50">
-                Welcome to my Random Password API
-                </p>
-                <div class="mt-6">
-                    <a href="docs"
-                        class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-black text-opacity-75 bg-white bg-opacity-75 sm:bg-opacity-25 sm:hover:bg-opacity-50">
-                        Go to Interactive Docs
-                    </a>
-                </div>
-
-                <div class="mt-6">
-                    <a href="redoc"
-                        class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-black text-opacity-75 bg-white bg-opacity-75 sm:bg-opacity-25 sm:hover:bg-opacity-50">
-                        ReDoc
-                    </a>
-                </div>
-            </div>
-        </main>
-    </body>
-
-    </html>
-        """
-
-    
-    return HTMLResponse(content=html_content, status_code=200)
-
-
 @app.get("/password", summary="Get a randomly generated password", tags=['Password Generators'])
 async def read_item(pwd_length: Union[int,None] = 5,
                     use_symbols: Union[bool,None] = True,
