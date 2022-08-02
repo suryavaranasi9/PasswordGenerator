@@ -19,6 +19,7 @@ Please see the [`CONTRIBUTING.md`](docs/CONTRIBUTING.md) guidelines before pushi
 - navigate to the **src** folder and run the following command:
     - `uvicorn main2:app --reload`
 - This will start a locally hosted server at **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
+- Google Chrome or Firefox can be used to open the above URL.
 - you can then make requests to the api by specifying a url with parameters if need be.
 - To see what requests can be made navigate to the `/docs` page where you will be greeted with the beautiful **swaggerUI**.
 - To see the endpoints navigate to to the `/password` page where you will find the API output
@@ -27,7 +28,6 @@ Please see the [`CONTRIBUTING.md`](docs/CONTRIBUTING.md) guidelines before pushi
 ### References:
 
 - [FastApi](https://fastapi.tiangolo.com/)
-- [The Django Project](https://www.djangoproject.com/) 
 - [Swagger UI](https://github.com/swagger-api/swagger-ui)
 - [Contributing guidelines](docs/CONTRIBUTING.md)
 - [Security](docs/CONTRIBUTING.md)
