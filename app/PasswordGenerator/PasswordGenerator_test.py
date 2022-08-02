@@ -93,16 +93,32 @@ class TestPasswordGenerator(unittest.TestCase):  # inherits from unittest.TestCa
     def test_num_of_passwords(self):
         """Tests the case of providing Zero number of passwords for output"""
         
-        pwd1 = PasswordGenerator().generate_password(20, False, False, False,0) # to test zero pass outputs
+        pwd1 = PasswordGenerator().generate_password(20, False, True, False,0) # to test zero pass outputs
         
         self.assertTrue(pwd1 == 'Empty Password Strings') # evaluate if both tests are true
     
-    def length_exceed(self):
-        """Tests the case where password limit is less than or equal to 200"""
+    def test_length_exceed(self):
+        """Tests the case where password limit is NOT less than or equal to 200"""
+        message = "First value and second value are not equal !"
+        pwd1 = PasswordGenerator().generate_password(201, True, False, True,3) #to test without numbers
+        firstValue = pwd1 
+        secondValue = "Password generated"
+        print(pwd1)
         
-        pwd1 = PasswordGenerator().generate_password(46, True, False, True,3)  # to test without numbers
+        self.assertEqual(firstValue, secondValue, message)
+   
+    def test_length_numPass(self):
+        """Negative Test Case where length > 200 and Numof pass <0"""
+        pwd1 = PasswordGenerator().generate_password(201, False, True, False,-1)
         
-        test_case1 = len(pwd1) <= 10  # check to see if the length is <=  200
+        self.assertTrue(pwd1 == 'Empty Password Strings')
+    
+    def test_negative_value_length(self):
+        """"Test case for Negative value of length of password"""
+        message = "First value and second value are not equal !"
+        pwd1 = PasswordGenerator().generate_password(-1, False, True, False,3)
+        
+        self.assertEqual(pwd1,'Cannot Generate password',message)
 
 
 if __name__ == '__main__':
