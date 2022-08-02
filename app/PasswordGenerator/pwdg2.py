@@ -42,11 +42,11 @@ class PasswordGenerator:
         pwd_list = []
         chosen_characters = []  # add all the characters that the user chose to a new list
         
-        if (p_length >=200 ):
-            return "Password Length Exceeded"
+        if (p_length <= 0 or num_of_pass <= 0):
+            return "Cannot Generate password"
         
-        if (num_of_pass <= 0):
-            return "Empty Password Strings"
+        if (p_length >200 ):
+            return "Password Length Exceeded"
         
         for i in range(0,num_of_pass):
             pwd = ''
