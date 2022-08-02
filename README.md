@@ -23,6 +23,9 @@ Please see the [`CONTRIBUTING.md`](docs/CONTRIBUTING.md) guidelines before pushi
 - you can then make requests to the api by specifying a url with parameters if need be.
 - To see what requests can be made navigate to the `/docs` page where you will be greeted with the beautiful **swaggerUI**.
 - To see the endpoints navigate to to the `/password` page where you will find the API output
+- If you are curious about how the raw OpenAPI schema looks like, FastAPI automatically generates a JSON (schema) with the descriptions of all your API.
+**[http://127.0.0.1:8000/openapi.json](http://127.0.0.1:8000/openapi.json)**
+
 
 
 ### References:
