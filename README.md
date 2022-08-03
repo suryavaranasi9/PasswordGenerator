@@ -16,7 +16,7 @@ Please see the [`CONTRIBUTING.md`](docs/CONTRIBUTING.md) guidelines before pushi
 ### Usage:
 - see [`FastApi`](https://fastapi.tiangolo.com/) for in depth api details.
 - Ensure you have a *local virtual environment* setup and `pip install -r requirements`.
-- navigate to the **src** folder and run the following command:
+- navigate to the **app** folder and run the following command:
     - `uvicorn main2:app --reload`
 - This will start a locally hosted server at **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
 - Google Chrome or Firefox can be used to open the above URL.
