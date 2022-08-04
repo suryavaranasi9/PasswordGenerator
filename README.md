@@ -22,7 +22,8 @@ Please see the [`CONTRIBUTING.md`](docs/CONTRIBUTING.md) guidelines before pushi
 - Google Chrome or Firefox can be used to open the above URL.
 - you can then make requests to the api by specifying a url with parameters if need be.
 - To see what requests can be made navigate to the `/docs` page where you will be greeted with the beautiful **swaggerUI**.
-- To see the endpoints navigate to to the `/password` page where you will find the API output
+- To see the endpoints navigate to to the `/password` page where you will find the Default API output
+- To see work on the interactive API , nagivate to the `/docs` page where you can select the `/password` View and click on "Try it out" and see the generated API, curl commands, and requested URLs along with request success code and outputs below it.
 - If you are curious about how the raw OpenAPI schema looks like, FastAPI automatically generates a JSON (schema) with the descriptions of all your API.
 **[http://127.0.0.1:8000/openapi.json](http://127.0.0.1:8000/openapi.json)**
 
